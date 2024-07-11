@@ -1,4 +1,5 @@
 Motorcycle Price Prediction
+
 This project aims to predict the selling price of used motorcycles based on various features such as the age of the motorcycle, kilometers driven, and ex-showroom price. The project involves data preprocessing, model training, and a web application to input new data and get predictions.
 
 bash
