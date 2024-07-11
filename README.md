@@ -1,36 +1,9 @@
 Motorcycle Price Prediction
 This project aims to predict the selling price of used motorcycles based on various features such as the age of the motorcycle, kilometers driven, and ex-showroom price. The project involves data preprocessing, model training, and a web application to input new data and get predictions.
 
-Project Structure
-css
-Copy code
-MotorCyclePricePredictor/
-│
-├── data/
-│   ├── BIKE DETAILS.csv
-│   ├── preprocessed_bike_data.csv
-│
-├── models/
-│   ├── linear_regression_model.pkl
-│
-├── src/
-│   ├── data_preprocessing.py
-│   ├── model_training.py
-│
-├── app/
-│   ├── app.py
-│   ├── templates/
-│       └── index.html
-│
-├── README.md
-│
-└── requirements.txt
-Setup Instructions
-Clone the Repository:
-
 bash
 Copy code
-git clone https://github.com/your-username/MotorCyclePricePredictor.git
+git clone https://github.com/joiz1/MotorCyclePricePredictor.git
 cd MotorCyclePricePredictor
 Create and Activate a Virtual Environment:
 
