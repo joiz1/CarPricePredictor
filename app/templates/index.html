@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Price Prediction</title>
+</head>
+<body>
+    <h1>Motorcycle Price Prediction</h1>
+    <form id="prediction-form">
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year"><br><br>
+        <label for="km_driven">KM Driven:</label>
+        <input type="text" id="km_driven" name="km_driven"><br><br>
+        <label for="ex_showroom_price">Ex-Showroom Price:</label>
+        <input type="text" id="ex_showroom_price" name="ex_showroom_price"><br><br>
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand"><br><br>
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model"><br><br>
+        <label for="seller_type">Seller Type:</label>
+        <input type="text" id="seller_type" name="seller_type"><br><br>
+        <label for="owner">Owner:</label>
+        <input type="text" id="owner" name="owner"><br><br>
+        <button type="button" onclick="getPrediction()">Predict</button>
+    </form>
+    <h2>Predicted Price: <span id="predicted-price">undefined</span></h2>
+
+    <script>
+        function getPrediction() {
+            var formData = new FormData(document.getElementById('prediction-form'));
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('predicted-price').textContent = data.prediction;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
